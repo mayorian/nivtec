@@ -1,194 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Nivtec ©MayoSolutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Orbitron futuristic font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<html>
   
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle at top, #1a1a1a, #000000);
-      color: #ffffff;
-    }
+    <head>
+      
+    <title>Nivtec ©MayoSolutions</title>
+      
+      <style>
+        body{
+          background-color: #4d4d4d;
+        }
+        table, th, td {
+          border: 8px solid #4d4d4d;
+        }
+        h1{
+          font-family: Arial, Helvetica, sans-serif;
+          color: white;
+        }
+        
+        h2 {
+          font-family: Arial, Helvetica, sans-serif;
+          color: yellow;
+          font-size: 30px;
+        }
+        
+        h3, p {
+          font-family: Arial, Helvetica, sans-serif;
+          color: yellow;
+        }
+        
+        
+        .button-1 {
+          background-color: #006600; /* Green */
+          border: 1px solid black;
+          color: white;
 
-    h1 {
-      color: #00ffff;
-      text-align: center;
-      font-size: 3rem;
-      text-shadow: 0 0 8px #00ffff;
-    }
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          cursor: pointer;
+        }
+        
+        .button-2 {
+          background-color: #cc7a14; /* Green */
+          border: 1px solid black;
+          color: white;
 
-    h2 {
-      color: #ffdd00;
-      font-size: 2rem;
-      text-align: center;
-      text-shadow: 0 0 6px #ffaa00;
-      margin-bottom: 20px;
-    }
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          cursor: pointer;
+        }
+        
+        .button-3 {
+          background-color: #660d66; /* Green */
+          border: 1px solid black;
+          color: white;
 
-    h3, p {
-      color: #ffc107;
-      text-align: center;
-      font-size: 1rem;
-    }
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          cursor: pointer;
+        }
 
-    .center-element {
-      width: 95%;
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 20px;
-      background-color: rgba(255, 255, 255, 0.03);
-      box-shadow: 0 0 30px rgba(0,255,255,0.15);
-      backdrop-filter: blur(6px);
-    }
+        .button-1:hover {
+          background-color: #132bc6;
+        }
+        
+        .button-2:hover {
+          background-color: #132bc6;
+        }
+        
+        .button-3:hover {
+          background-color: #132bc6;
+        }
 
-    .mode-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .mode-button {
-      background: linear-gradient(145deg, #202020, #2a2a2a);
-      border: none;
-      color: #ffffff;
-      font-size: 1rem;
-      padding: 20px;
-      width: 250px;
-      height: 420px;
-      border-radius: 20px;
-      box-shadow: 0 0 12px rgba(0,255,255,0.3);
-      transition: all 0.3s ease-in-out;
-      backdrop-filter: blur(4px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      text-align: center;
-    }
-
-    .mode-button:hover {
-      transform: scale(1.05);
-      background: linear-gradient(145deg, #0044cc, #0066ff);
-      box-shadow: 0 0 20px rgba(0,128,255,0.7);
-      cursor: pointer;
-    }
-
-    .mode-button img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 12px;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .mode-button:hover img {
-      transform: scale(1.05);
-    }
-
-    .img-style {
-      width: 90%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin: 10px 0;
-      width: 100%;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      .mode-button {
-        width: 90%;
-        height: auto;
-        padding: 20px;
-      }
-
-      .mode-button img {
-        height: 180px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
-
-      .mode-button {
-        width: 100%;
-        padding: 15px;
-      }
-
-      .mode-button img {
-        height: 160px;
-      }
-    }
-  </style>
-</head>
+        .button1 {border-radius: 2px;}
+        .button2 {border-radius: 4px;}
+        .button3 {border-radius: 8px;}
+        .button4 {border-radius: 12px;}
+        .button5 {border-radius: 50%;}
+        
+        .font-button{
+          font-size: 30px;
+        }
+        
+        .center-table {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+        
+        .center-element {
+          margin: auto;
+          width: 800px;
+          border: 3px solid #4d4d4d;
+          padding: 10px;
+        }
+        
+        .center-sub-element {
+          margin: auto;
+          width: 100%;
+          border: 3px solid #4d4d4d;
+          padding: 10px;
+        }
+        
+        
+        .solid-border{
+          border: 8px solid;
+          border-radius: 10px;
+        }
+        
+        .img-style{
+          height:90%; width:90%; display: block;
+        }
+      </style>
+      
+    </head>
+  
 <body>
 
   <div class="center-element">
-    <h1>
-      Nivtec Calculator
-      <hr>
-      by <br>
-      <img
-        src="imgs/brandFinalPNG.png"
-        style="width:25%; max-width: 150px;"
-        crossorigin="anonymous"
-      />
+    <h1>Nivtec Calculator <hr> by
+
+        <img
+            src="imgs/brandFinalPNG.png"
+            style="width:25%"
+            crossorigin="anonymous"
+        />
     </h1>
+    
+    <hr> 
+    
+    <h2> Select mode</h2>
+  
 
-    <h2>Select Mode</h2>
-
-    <div class="mode-container">
-
-      <button class="mode-button" onclick="location.href='4221.html';">
-        <hr>Common Mode<hr>
-        <img src="imgs/4221mode.jpg" alt="Common Mode" crossorigin="anonymous" />
-        <hr>Basic Assembly<p style="font-size: 20px;">.</p><hr>
-      </button>
-
-      <button class="mode-button" onclick="location.href='4222ver.html';">
-        <hr>Specific Mode<hr>
-        <img src="imgs/4222modeVertical.jpg" alt="Vertical Mode" crossorigin="anonymous" />
-        <hr>4 ► 2 Assembly<p style="font-size: 20px;">VERTICAL</p><hr>
-      </button>
-
-      <button class="mode-button" onclick="location.href='4222hor.html';">
-        <hr>Specific Mode<hr>
-        <img src="imgs/4222modeHorizontal.jpg" alt="Horizontal Mode" crossorigin="anonymous" />
-        <hr>4 ► 2 Assembly<p style="font-size: 20px;">HORIZONTAL</p><hr>
-      </button>
-
-      <button class="mode-button" onclick="location.href='4444.html';">
-        <hr>Specific Mode<hr>
-        <img src="imgs/4444mode.jpg" alt="4x4 Mode" crossorigin="anonymous" />
-        <hr>4 ► 4 Assembly<p style="font-size: 20px;">.</p><hr>
-      </button>
-
-    </div>
+  
+    <table class="center-table">      
+      <tr>
+        
+        <td>        
+          <button class="font-button button-1 button4 center-table"  onclick="location.href='4221.html';">
+              <hr>
+              Common Mode
+              <hr>
+                  <img
+                  src="imgs/4221mode.jpg"
+                  class="img-style center-table "
+                  crossorigin="anonymous"
+                  />
+              <hr>
+              Basic Assembly <p style="font-size: 20px;"> . </p>
+              <hr>
+          </button>         
+        </td>
+        
+        <td>        
+          <button class="font-button button-2 button4 center-table" onclick="location.href='4222ver.html';">
+              <hr>
+              Specific Mode
+              <hr>
+                  <img
+                  src="imgs/4222modeVertical.jpg"
+                  class="img-style center-table "
+                  crossorigin="anonymous"
+                  />
+              <hr>      
+              4 ► 2 Assembly <p style="font-size: 20px;"> VERTICAL </p>
+              <hr>
+          </button>         
+        </td>
+        
+        <td>        
+          <button class="font-button button-2 button4 center-table" onclick="location.href='4222hor.html';">
+              <hr>
+              Specific Mode
+              <hr>
+                  <img
+                  src="imgs/4222modeHorizontal.jpg"
+                  class="img-style center-table "
+                  crossorigin="anonymous"
+                  />
+              <hr>      
+              4 ► 2 Assembly <p style="font-size: 20px;"> HORIZONTAL </p>
+              <hr>
+          </button>         
+        </td>
+        
+        <td>        
+          <button class="font-button button-3 button4 center-table"  onclick="location.href='4444.html';">
+              <hr>
+              Specific Mode
+              <hr>
+                  <img
+                  src="imgs/4444mode.jpg"
+                  class="img-style center-table "
+                  crossorigin="anonymous"
+                  />
+              <hr>
+              4 ► 4 Assembly <p style="font-size: 20px;"> . </p>
+              <hr>
+          </button>         
+        </td>
+        
+      </tr>  
+      
+    </table>
+    
   </div>
 
 </body>
