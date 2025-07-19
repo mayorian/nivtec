@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Nivtec ©MayoSolutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Orbitron futuristic font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   
@@ -14,32 +14,33 @@
       font-family: 'Orbitron', sans-serif;
       background: radial-gradient(circle at top, #1a1a1a, #000000);
       color: #ffffff;
-      overflow-x: hidden;
     }
 
     h1 {
       color: #00ffff;
       text-align: center;
-      font-size: 48px;
+      font-size: 3rem;
       text-shadow: 0 0 8px #00ffff;
     }
 
     h2 {
       color: #ffdd00;
-      font-size: 32px;
+      font-size: 2rem;
       text-align: center;
       text-shadow: 0 0 6px #ffaa00;
+      margin-bottom: 20px;
     }
 
     h3, p {
       color: #ffc107;
       text-align: center;
-      font-size: 18px;
+      font-size: 1rem;
     }
 
     .center-element {
-      max-width: 90%;
-      margin: 50px auto;
+      width: 95%;
+      max-width: 1200px;
+      margin: 40px auto;
       padding: 30px;
       border-radius: 20px;
       background-color: rgba(255, 255, 255, 0.03);
@@ -47,20 +48,18 @@
       backdrop-filter: blur(6px);
     }
 
-    table {
-      margin: 2rem auto;
-      border-collapse: collapse;
+    .mode-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
-    td {
-      padding: 20px;
-    }
-
-    button {
+    .mode-button {
       background: linear-gradient(145deg, #202020, #2a2a2a);
       border: none;
       color: #ffffff;
-      font-size: 18px;
+      font-size: 1rem;
       padding: 20px;
       width: 250px;
       height: 380px;
@@ -68,26 +67,27 @@
       box-shadow: 0 0 12px rgba(0,255,255,0.3);
       transition: all 0.3s ease-in-out;
       backdrop-filter: blur(4px);
-      position: relative;
-      overflow: hidden;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    button:hover {
+    .mode-button:hover {
       transform: scale(1.05);
       background: linear-gradient(145deg, #0044cc, #0066ff);
       box-shadow: 0 0 20px rgba(0,128,255,0.7);
+      cursor: pointer;
     }
 
-    button img {
+    .mode-button img {
       width: 100%;
       height: auto;
-      margin: 10px 0;
       border-radius: 12px;
       transition: transform 0.3s ease-in-out;
     }
 
-    button:hover img {
+    .mode-button:hover img {
       transform: scale(1.05);
     }
 
@@ -101,6 +101,38 @@
       border: none;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       margin: 10px 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .mode-button {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .mode-button {
+        width: 100%;
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -113,70 +145,40 @@
       by <br>
       <img
         src="imgs/brandFinalPNG.png"
-        style="width:25%"
+        style="width:25%; max-width: 150px;"
         crossorigin="anonymous"
       />
     </h1>
-    
-    <hr> 
-    
-    <h2>Select mode</h2>
 
-    <table>
-      <tr>
-        <td>        
-          <button onclick="location.href='4221.html';">
-            <hr>
-            Common Mode
-            <hr>
-            <img src="imgs/4221mode.jpg" class="img-style" crossorigin="anonymous" width="50%" height="60%"/>
-            <hr>
-            Basic Assembly
-            <p style="font-size: 20px;">.</p>
-            <hr>
-          </button>         
-        </td>
-        
-        <td>        
-          <button onclick="location.href='4222ver.html';">
-            <hr>
-            Specific Mode
-            <hr>
-            <img src="imgs/4222modeVertical.jpg" class="img-style" crossorigin="anonymous" />
-            <hr>      
-            4 ► 2 Assembly
-            <p style="font-size: 20px;">VERTICAL</p>
-            <hr>
-          </button>         
-        </td>
-        
-        <td>        
-          <button onclick="location.href='4222hor.html';">
-            <hr>
-            Specific Mode
-            <hr>
-            <img src="imgs/4222modeHorizontal.jpg" class="img-style" crossorigin="anonymous" />
-            <hr>      
-            4 ► 2 Assembly
-            <p style="font-size: 20px;">HORIZONTAL</p>
-            <hr>
-          </button>         
-        </td>
-        
-        <td>        
-          <button onclick="location.href='4444.html';">
-            <hr>
-            Specific Mode
-            <hr>
-            <img src="imgs/4444mode.jpg" class="img-style" crossorigin="anonymous" />
-            <hr>
-            4 ► 4 Assembly
-            <p style="font-size: 20px;">.</p>
-            <hr>
-          </button>         
-        </td>
-      </tr>  
-    </table>
+    <h2>Select Mode</h2>
+
+    <div class="mode-container">
+
+      <button class="mode-button" onclick="location.href='4221.html';">
+        <hr>Common Mode<hr>
+        <img src="imgs/4221mode.jpg" alt="Common Mode" class="img-style" crossorigin="anonymous" />
+        <hr>Basic Assembly<p style="font-size: 20px;">.</p><hr>
+      </button>
+
+      <button class="mode-button" onclick="location.href='4222ver.html';">
+        <hr>Specific Mode<hr>
+        <img src="imgs/4222modeVertical.jpg" alt="Vertical Mode" class="img-style" crossorigin="anonymous" />
+        <hr>4 ► 2 Assembly<p style="font-size: 20px;">VERTICAL</p><hr>
+      </button>
+
+      <button class="mode-button" onclick="location.href='4222hor.html';">
+        <hr>Specific Mode<hr>
+        <img src="imgs/4222modeHorizontal.jpg" alt="Horizontal Mode" class="img-style" crossorigin="anonymous" />
+        <hr>4 ► 2 Assembly<p style="font-size: 20px;">HORIZONTAL</p><hr>
+      </button>
+
+      <button class="mode-button" onclick="location.href='4444.html';">
+        <hr>Specific Mode<hr>
+        <img src="imgs/4444mode.jpg" alt="4x4 Mode" class="img-style" crossorigin="anonymous" />
+        <hr>4 ► 4 Assembly<p style="font-size: 20px;">.</p><hr>
+      </button>
+
+    </div>
   </div>
 
 </body>
